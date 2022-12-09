@@ -1,0 +1,8 @@
+{
+  "variables": {
+    "productName": {
+      "type": "String",
+      "value": "vName"
+    }
+  }
+}

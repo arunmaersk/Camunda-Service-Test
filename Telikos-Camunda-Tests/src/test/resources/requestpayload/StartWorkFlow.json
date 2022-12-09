@@ -1,0 +1,23 @@
+{
+  "servicePlan":{
+    "product": {
+      "productCode": "pCode",
+      "productName": "pName",
+      "productDescription": "Inland Journey trial"
+    },
+    "servicePlanNumber":"sNumber",
+    "isMultiCountryConsolidation":false,
+    "hasDistributionCentre":false,
+    "hasOriginMilkRun":false,
+    "cargoServiceType":"FCL"
+  },
+  "bookingId":"bId",
+  "logisticId":"lId",
+  "captureData":"Unknown",
+  "bookingStatus":"Submitted",
+  "rules":[],
+  "validationMessage":"Unknown",
+  "isFulfilment":false
+}
+
+

@@ -1,0 +1,21 @@
+{
+  "servicePlan":{
+    "product": {
+      "productCode": "pCode",
+      "productName": "pName",
+      "productDescription": "Inland Intermodal Journey trial"
+    },
+    "servicePlanNumber":"sNumber",
+    "isMultiCountryConsolidation":false,
+    "hasDistributionCentre":false,
+    "hasOriginMilkRun":false,
+    "cargoServiceType":"FCL"
+  },
+  "bookingId":"bId",
+  "logisticId":"lId",
+  "captureData":"Captured",
+  "bookingStatus":"Submitted",
+  "rules":["weightLimit","documentList"],
+  "validationMessage":"Success",
+  "isFulfilment":true
+}

@@ -1,0 +1,48 @@
+
+server:
+  port: 18080
+camunda.bpm:
+  admin-user:
+    id: demo
+    password: demo
+    firstName: Demo
+spring:
+  jersey:
+    application-path: /anchor-flow
+  jpa:
+    show-sql: false
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: org.hibernate.dialect.PostgreSQLDialect
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: soil
+  kafka:
+    auto:
+      create:
+        topics:
+          enable: true
+
+    consumer:
+      properties:
+        spring.json.trusted.packages: "*"
+
+kafka:
+    bootstrap-address: localhost:29092
+    group-id: someGroupId
+    trusted-packages: com.example
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+main:
+  allow-bean-definition-overriding: true
+

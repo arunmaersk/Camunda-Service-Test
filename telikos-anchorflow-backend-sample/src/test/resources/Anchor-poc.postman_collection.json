@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "2409f325-23ae-4529-a69d-ea180f64426f",
+		"name": "Anchor-poc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UI_Fulfilment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:18091/fulfilment?bookingId=B3&fulfilment=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "18091",
+					"path": [
+						"fulfilment"
+					],
+					"query": [
+						{
+							"key": "bookingId",
+							"value": "B3"
+						},
+						{
+							"key": "fulfilment",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StartWorkflow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"servicePlan\":{\n        \"product\": {\n            \"productCode\": \"IM\",\n            \"productName\": \"CHB\",\n            \"productDescription\": \"Inland Intermodal Journey trial\"\n        },\n        \"servicePlanNumber\":\"SP1\",\n        \"isMultiCountryConsolidation\":false,\n        \"hasDistributionCentre\":false,\n        \"hasOriginMilkRun\":false,\n        \"cargoServiceType\":\"FCL\"\n    },\n\t\"bookingId\":\"B3\",\n\t\"logisticId\":\"L1\",\n    \"captureData\":\"Unknown\",\n    \"bookingStatus\":\"Submitted\",\n    \"rules\":[],\n    \"validationMessage\":\"Unknown\",\n    \"isFulfilment\":false\n}\n\n\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:18080/message-process/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "18080",
+					"path": [
+						"message-process",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UI_Validation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:18091/validateBooking?bookingId=B3&validBooking=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "18091",
+					"path": [
+						"validateBooking"
+					],
+					"query": [
+						{
+							"key": "bookingId",
+							"value": "B3"
+						},
+						{
+							"key": "validBooking",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

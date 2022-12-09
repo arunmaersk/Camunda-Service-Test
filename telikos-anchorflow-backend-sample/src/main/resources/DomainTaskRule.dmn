@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="DomainTaskRuleDefination" name="Domain Task Rule" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.4.2" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="Decision_DomainTaskRule" name="DomainTaskRule">
+    <decisionTable id="DecisionTable_04btiw6">
+      <input id="Input_1" label="productName" camunda:inputVariable="productName">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_14n6rzr">
+          <text>"InterModal","CHB"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="domainTaskRule" name="domainTaskRule" typeRef="string" biodi:width="191">
+        <outputValues id="UnaryTests_18kulk7">
+          <text>"Capture:Validate:Fullfilment:RecordBooking:SendNotification:PublishConfirmation","PreCapture:Capture:Validate:Fullfilment:RecordBooking:SendNotification:PublishConfirmation"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_19qx03a">
+        <description>Domain Task Rule with sequence and step name details.</description>
+        <inputEntry id="UnaryTests_0t2mu1b">
+          <text>"InterModal"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_149kf5c">
+          <text>"Capture:Validate:Fullfilment:RecordBooking:SendNotification:PublishConfirmation"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dmi1dg">
+        <description>Domain Task Rule with sequence and step name details.</description>
+        <inputEntry id="UnaryTests_1jdus9x">
+          <text>"CHB"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19zh17i">
+          <text>"PreCapture:Capture:Validate:Fullfilment:RecordBooking:SendNotification:PublishConfirmation"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_DomainTaskRule">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
